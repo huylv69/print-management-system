@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LenhIn" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="056dfd95-058b-4a75-a4a5-a4e3c2f930cc">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SoLenh" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[Select]]>
+	</queryString>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="a2c548f4-f20d-4f9c-baa5-65d85ecde079"/>
+				<staticText>
+					<reportElement x="44" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="e409a67a-4643-4140-b85a-69c6efdf7f3c"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Lệnh In]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="44" y="72" width="180" height="20" forecolor="#FFFFFF" uuid="f0d912d1-12e5-456e-bd2b-157d0f43f417"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[( Kiêm phiếu xuất kho )]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="416" y="49" width="73" height="43" forecolor="#FFFFFF" uuid="d9d92b60-7e39-43c4-9bd6-df725787c03f"/>
+					<textElement>
+						<font size="32"/>
+					</textElement>
+					<text><![CDATA[Số :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="477" y="49" width="108" height="43" forecolor="#FFFFFF" uuid="a112fcff-407e-46ac-b8c2-01f3f95139d1"/>
+					<textElement>
+						<font size="32"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{SoLenh}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="122">
+			<staticText>
+				<reportElement x="0" y="11" width="555" height="14" uuid="4ec3901b-0e83-436c-9115-11c08f835677"/>
+				<textElement>
+					<font size="11" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Số đơn của khách:                        Số đơn của KAN:   	              Người lập :  	               Ngày:    ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="100" height="77" uuid="2269cca5-67f2-48e5-ae55-7bd9d35623e9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Mã hàng:
+
+Tên hàng:
+
+Tên khách hàng:
+]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="400">
+			<staticText>
+				<reportElement x="0" y="0" width="120" height="20" uuid="e6d4e74d-1fde-4dfb-8060-b0bd76074785"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[I/ PHẦN VẬT TƯ:	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="32" width="555" height="58" uuid="35668bdb-baf0-43f6-8d67-d20c25bfd6d2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Loại giấy in:              	  				Khổ:     		Cm
+
+Tổng số lượng giấy:		M . Trong đó bù hao:  		 M  . Thành phẩm yêu cầu:  		     M.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="90" width="263" height="20" uuid="b6e96291-0d57-4369-8371-84c50d85bb24"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thủ kho ký tên           Thợ in nhập giấy ký tên]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="248" height="41" uuid="056bb917-8b7c-41f3-8f1f-f6a4403df78c"/>
+				<textElement>
+					<font size="11" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[* Thợ in phải kiểm tra giấy về số lượng, chất lượng,
+chủng loại trước khi in.
+]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="16">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="555" height="1" uuid="8042307c-2940-44c5-b09a-2f4f91a94b9c"/>
+			</line>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="1" width="515" height="13" backcolor="#E6E6E6" uuid="f804d8db-ec06-4e50-a16a-72a2b4637eea"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="1" width="40" height="13" backcolor="#E6E6E6" uuid="c2d83a26-aa3a-4e52-84b1-895a0005258c"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="1" width="100" height="13" uuid="9ba84a3e-a4c6-4db8-9f09-fdc810e4133c"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
