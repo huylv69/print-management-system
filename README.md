@@ -25,14 +25,6 @@
 <p align="center">
     <img
       alt=""
-      src="report/admin.jpg"
-      width="700"
-    />
-</p>
-
-<p align="center">
-    <img
-      alt=""
       src="report/print.jpg"
       width="700"
     />
